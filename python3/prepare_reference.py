@@ -14,8 +14,7 @@
 #     - F1-cross vcf files
 #     - Gene-Transcript-Exon Annotations
 # 
-# NOTE: the order of chromosomes in each file should be the same (add test)!
-# FOR MICE ONLY
+# NOTE: the order of chromosomes in each file should be the same!
 #
 # DEPEND:
 # bash(v4.2.46)
@@ -29,7 +28,7 @@
 #
 # Please, use --help|-h for help. 
 # For more information, please, visit:
-#       https://github.com/gimelbrantlab/ASE
+#       https://github.com/gimelbrantlab/GATKstar
 #
 
 import argparse
