@@ -564,8 +564,8 @@ def main():
                 snp_mat_vcf = tempfile.NamedTemporaryFile(delete=False, suffix=".vcf")
                 snp_pat_vcf = tempfile.NamedTemporaryFile(delete=False, suffix=".vcf")
                 
-                GATK_SelectVariants(r=args.ref, v=args.vcf_pat, o=snp_pat_vcf.name, n=name_pat, b=False)
-                GATK_SelectVariants(r=args.ref, v=args.vcf_mat, o=snp_mat_vcf.name, n=name_mat, b=False)
+                GATK_SelectVariants(r=args.ref, v=args.vcf_joint, o=snp_pat_vcf.name, n=name_pat, b=False)
+                GATK_SelectVariants(r=args.ref, v=args.vcf_joint, o=snp_mat_vcf.name, n=name_mat, b=False)
                 SelectBiallelicSNP_VCF(snp_mat_vcf.name, sep_vcf_mat, name_mat)
                 SelectBiallelicSNP_VCF(snp_pat_vcf.name, sep_vcf_pat, name_pat)
 
