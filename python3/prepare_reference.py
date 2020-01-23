@@ -25,6 +25,7 @@
 # bcftools(v1.3.1)
 # htslib(v1.3.2)
 # cufflinks(v2.2.1)
+# vcftools(v0.1.17)
 #
 # Please, use --help|-h for help. 
 # For more information, please, visit:
