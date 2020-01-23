@@ -20,6 +20,10 @@ The resulting allelic counts tables can be used for allelic imbalance analysis v
 
 TODO: ![scheme]()
 
+## Installation
+
+Clone this repository to your local machine. No additional installation needed.
+
 
 
 ## Credits
