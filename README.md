@@ -7,13 +7,13 @@ This pipeline was used as the main procedure for creating tables of gene allelic
 
 The pipeline can be divided into two prime parts:
 
-* **Reference preparation**
+1. **Reference preparation**
   constructs individual paternal and maternal genomes, creates heterozigous VCF.
 
-* **Creation of tables with Allelic Counts**
+2. **Creation of tables with Allelic Counts**
   maps the reads from RNA-seq experiments to these genomes and counts the number of reads which map to either the reference or alternate allele at each heterozygous SNP, estimates allelic imbalance for individual genes summarizing information from SNPs.
 
-Please find **manuals / worked examples** at **[Wiki page](https://github.com/gimelbrantlab/GATKstar/wiki)**.
+Please find **manuals / worked examples** at **[Wiki page](https://github.com/gimelbrantlab/GATKstar/wiki)** of this repository.
 
 The resulting allelic counts tables can be used for allelic imbalance analysis via [QCumber](https://github.com/gimelbrantlab/QCumber).
 
