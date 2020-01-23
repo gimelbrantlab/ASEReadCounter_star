@@ -10,8 +10,7 @@
 #
 # run:
 #
-# Rscript --vanilla counts_to_SNPs_extended2.R -p "/Users/svetlana/Dropbox (Partners HealthCare)/ASE/resultsUpdAugust/Abelson" -r Aleson_test -n Abl1,Abl2 -s GRCm38 -e /Users/svetlana -t exon -m /Users/svetlana/extract_vcf.txt
-#
+# Rscript --vanilla counts_to_snp_genes.R  -d [/dir/with/allelecounts/]  -n [names,divided,by,commas]  -s [suffix.txt]  -r [project_name]  -b [regions_of_interest.bed]  -v [snps_of_interest.vcf]  -o [/dir/for/output/] 
 #
 # [TODO] : path to lib directory
 library("optparse") #, lib.loc="/home/am717/R/x86_64-pc-linux-gnu-library/3.4)"
@@ -152,15 +151,6 @@ merge_gene_tab <- merge_gene_tab[order(merge_gene_tab$contig,
 #
 write.table(merge_gene_tab, file=file_out_g, sep = "\t", quote = F, row.names = F)
 #
-#
-#
-#
-#
-#
-names(merge_gene_tab)[1] = "ensembl_gene_id"
-names(merge_gene_tab)[names(merge_gene_tab)=="contig"] = "chr"
-write.table(merge_gene_tab, file=file.path(opt$odir, paste0(opt$pr_name, "_processed_gene_extended2.txt")),
-            sep = "\t", quote = F, row.names = F)
 #
 
 
