@@ -24,14 +24,13 @@ TODO: ![scheme]()
 
 Clone this repository to your local machine. No additional installation needed.
 
+## Citations
 
-
-## Credits
-TODO: Write credits
+Please cite our paper _"Unexpected variability of allelic imbalance estimates from RNA sequencing", Mendelevich A.*, Vinogradova S.*, Gupta S., Mironov A., Synyaev S., Gimelbrant A._, if you used our pipeline in your work.
 
 ## License
-TODO: Write license
 
+MIT License
 
 
 
