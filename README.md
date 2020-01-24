@@ -23,6 +23,7 @@ TODO: ![scheme]()
 ## Installation
 
 Clone this repository to your local machine. No additional installation needed.
+Please find the information about tool prerequisites at **[Wiki page](https://github.com/gimelbrantlab/GATKstar/wiki)**.
 
 ## Citations
 
