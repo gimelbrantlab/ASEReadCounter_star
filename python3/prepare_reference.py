@@ -249,7 +249,7 @@ def gzip_tabix_VCF(vcf):
     cmd_bgzip = " ".join(["bgzip -c", vcf, ">", vcf + '.gz'])
     print(cmd_bgzip)
     subprocess.check_output(cmd_bgzip, shell=True)
-    cmd_tabix = " ".join(["tabix -p vcf", vcf + '.gz']),
+    cmd_tabix = " ".join(["tabix -p vcf", vcf + '.gz'])
     print(cmd_tabix)
     subprocess.check_output(cmd_tabix, shell=True)
     return
@@ -692,7 +692,7 @@ def main():
             elif (args.gtf is not None):
                 vcf_het_region = vcf_het.replace(".vcf", ".exons.vcf")
 
-                exon_bed = os.path.join(os.path.dirname(vcf_het_exon), os.path.basename(args.gtf) + "exons.bed")
+                exon_bed = os.path.join(os.path.dirname(vcf_het_region), os.path.basename(args.gtf) + "exons.bed")
                 cmd_exon_bed = " ".join(["grep -w 'exon'", args.gtf, "| grep '^[0-9XY]' | awk 'BEGIN{FS=OFS=", '"\t"', "}; {print $1,$4-1,$5}' >", exon_bed])
                 print(cmd_exon_bed)
                 subprocess.check_output(cmd_exon_bed, shell=True)
