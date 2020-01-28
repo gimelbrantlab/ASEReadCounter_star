@@ -96,7 +96,7 @@ def main():
 
     # Open output_sam; Get header:
 
-    header = subprocess.check_output("samtools view -SH "+args.mat_sam, shell=True)
+    header = subprocess.check_output("samtools view -SH "+args.mat_sam, shell=True, universal_newlines=True)
     out_stream = open(args.o, "w")
     out_stream.write(header)
     out_stream.write("@RG\tID:pat\n")
@@ -146,8 +146,8 @@ def main():
 
     # Skip header in each file:
 
-    m_skip = int(subprocess.check_output("samtools view -SH "+args.mat_sam+" | wc -l", shell=True).strip())
-    p_skip = int(subprocess.check_output("samtools view -SH "+args.pat_sam+" | wc -l", shell=True).strip())
+    m_skip = int(subprocess.check_output("samtools view -SH "+args.mat_sam+" | wc -l", shell=True, universal_newlines=True).strip())
+    p_skip = int(subprocess.check_output("samtools view -SH "+args.pat_sam+" | wc -l", shell=True, universal_newlines=True).strip())
 
     for i in range(m_skip):
         source_m.readline()
@@ -161,8 +161,8 @@ def main():
   
     # Merge till some EOF: 
     try:
-        m_read, m_read_name, m_score = mgen.next()
-        p_read, p_read_name, p_score = pgen.next()
+        m_read, m_read_name, m_score = mgen.__next__()
+        p_read, p_read_name, p_score = pgen.__next__()
         while 1:
             if m_read_name == p_read_name:
                 if m_score > p_score:
@@ -180,16 +180,16 @@ def main():
                     else:
                         pat_rand += 1
                         output_read(p_read)
-                m_read, m_read_name, m_score = mgen.next()
-                p_read, p_read_name, p_score = pgen.next()
+                m_read, m_read_name, m_score = mgen.__next__()
+                p_read, p_read_name, p_score = pgen.__next__()
             elif asc_order(p_read_name, m_read_name):
                 pat_only += 1
                 output_read(p_read)
-                p_read, p_read_name, p_score = pgen.next()
+                p_read, p_read_name, p_score = pgen.__next__()
             else:
                 mat_only += 1
                 output_read(m_read)
-                m_read, m_read_name, m_score = mgen.next()
+                m_read, m_read_name, m_score = mgen.__next__()
     except StopIteration:
         pass
 
