@@ -4,7 +4,7 @@
 # Description : Script that takes $name_stat_final.txt files as input,
 #               merges these files, intersects counts with exons annotaion
 #
-# Author      : Svetlana Vinogradova
+# Author      : Svetlana Vinogradova, Asia Mendelevich
 # Date        : 08/24/17
 # ***********************************************
 #
@@ -12,9 +12,8 @@
 #
 # Rscript --vanilla counts_to_snp_genes.R  -d [/dir/with/allelecounts/]  -n [names,divided,by,commas]  -s [suffix.txt]  -r [project_name]  -b [regions_of_interest.bed]  -v [snps_of_interest.vcf]  -o [/dir/for/output/] 
 #
-# [TODO] : path to lib directory
-library("optparse") #, lib.loc="/home/am717/R/x86_64-pc-linux-gnu-library/3.4)"
-library("tidyverse") #, lib.loc="/home/am717/R/x86_64-pc-linux-gnu-library/3.4")
+library("optparse") 
+library("tidyverse")
 #
 #
 option_list = list(

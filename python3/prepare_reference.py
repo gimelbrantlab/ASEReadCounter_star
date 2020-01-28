@@ -2,9 +2,9 @@
 #########################################################
 # 							#
 # 		ASE Replicates Project			#
-#         https://github.com/gimelbrantlab/ASE		#
+#         https://github.com/gimelbrantlab/GATKstar	#
 #							#
-#   Authors: Mendelevich Asya, Svetlana Vinogradova	#
+#   		Authors: Mendelevich Asia		#
 #							#
 #########################################################
 #

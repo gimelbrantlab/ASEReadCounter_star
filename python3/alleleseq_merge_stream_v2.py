@@ -1,8 +1,18 @@
+
+#########################################################
+#                                                       #
+#               ASE Replicates Project                  #
+#         https://github.com/gimelbrantlab/GATKstar     #
+#                                                       #
+#   Authors: Mendelevich Asia, Svetlana Vinogradova     #
+#   Idea is taken from GATK pipeline (Stephane Castel)	#
+#                                                       #
+#########################################################
 ##
 ## NOTE: 
 ## -- SAM-files should be already sorted by read names
 ## -- Read names must be non-empty
-## USAGE: alleleseq_merge_stream.py --pat_sam [path to file] --mat_sam [path to file] --o [path to file] --paired [0|1]
+## USAGE: alleleseq_merge_stream_v2.py --pat_sam [path to file] --mat_sam [path to file] --o [path to file] --paired [0|1]
 ##
 
 #import cProfile
