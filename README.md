@@ -8,7 +8,7 @@ This pipeline was used as the main procedure for creating tables of gene allelic
 The pipeline can be divided into two main parts:
 
 1. **Reference preparation**
-  constructs individual paternal and maternal genomes, creates heterozigous VCF.
+  constructs individual paternal and maternal genomes, creates heterozygous VCF.
 
 2. **Creation of tables with Allelic Counts**
   maps the reads from RNA-seq experiments to these genomes and counts the number of reads which map to either the reference or alternate allele at each heterozygous SNP, estimates allelic imbalance for individual genes summarizing information from SNPs.
