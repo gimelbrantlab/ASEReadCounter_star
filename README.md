@@ -5,7 +5,7 @@ This pipeline was used as the main procedure for creating tables of gene allelic
 
 >_"Unexpected variability of allelic imbalance estimates from RNA sequencing", Mendelevich A.*, Vinogradova S.*, Gupta S., Mironov A., Synyaev S., Gimelbrant A._
 
-The pipeline can be divided into two prime parts:
+The pipeline can be divided into two main parts:
 
 1. **Reference preparation**
   constructs individual paternal and maternal genomes, creates heterozigous VCF.
