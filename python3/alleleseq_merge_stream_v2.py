@@ -86,10 +86,10 @@ def main():
     # Parse arguments:
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--pat_sam", required=True, help="Reads aligned to paternal genome")
-    parser.add_argument("--mat_sam", required=True, help="Reads aligned to maternal genome")
-    parser.add_argument("--o", required=True, help="Output file")
-    parser.add_argument("--paired", default=0, help="Flag: If reads are paired-end")
+    parser.add_argument("--pat_sam", required=True, help="Path to reads aligned to paternal genome")
+    parser.add_argument("--mat_sam", required=True, help="Path to reads aligned to maternal genome")
+    parser.add_argument("--o", required=True, help="Path to output file")
+    parser.add_argument("--paired", default=0, help="Flag: If reads are paired-end (yes : 1, no : 0)")
     args = parser.parse_args()
     
     paired = int(args.paired)
