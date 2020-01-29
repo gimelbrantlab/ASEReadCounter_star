@@ -5,11 +5,11 @@ This is a re-implementation of the `ASEReadCounter` tool from [GATK](https://gen
 
 The pipeline consists of two main parts:
 
-1. **Reference preparation**
+0. **Reference preparation**
 
      construct individual "paternal" and "maternal" genome references, create heterozygous VCF.
 
-2. **Creation of tables with allelic counts**
+1. **Creation of tables with allelic counts**
 
   * map sequencing reads to references (using STAR aligner; see [complete list of dependencies](https://github.com/gimelbrantlab/ASEReadCounter_star/wiki/Prerequisites:-tools-and-packages))
   * perform random sampling of the mapped reads to defined depth (key step for overdispersion analysis in [QCumber](https://github.com/gimelbrantlab/QCumber))
