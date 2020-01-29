@@ -30,7 +30,7 @@ Please find the information about tool prerequisites at **[Wiki page](https://gi
 
 Please cite our paper _"Unexpected variability of allelic imbalance estimates from RNA sequencing", Mendelevich A.*, Vinogradova S.*, Gupta S., Mironov A., Sunyaev S., Gimelbrant A._, if you used our pipeline in your work.
 
-# Reporting bugs
+## Reporting bugs
 
 Please report bugs to the Github [issues](https://github.com/gimelbrantlab/ASEReadCounter_star/issues) page.
 
