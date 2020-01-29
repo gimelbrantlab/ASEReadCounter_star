@@ -11,9 +11,9 @@ The pipeline consists of two main parts:
 
 2. **Creation of tables with Allelic Counts**
 
-  * map sequencing reads to references (using STAR aligner)
-  * perform random sampling of the mapped reads to defined depth (key step for overdispersion analysis in QCumber)
-  * count the number of reads mapping to the reference or alternate allele at each heterozygous SNP, and collate the counts for genome intervals (e.g., genes).
+  * map sequencing reads to references (using STAR aligner; see [complete list of dependencies](https://github.com/gimelbrantlab/ASEReadCounter_star/wiki/Prerequisites:-tools-and-packages)
+  * perform random sampling of the mapped reads to defined depth (key step for overdispersion analysis in [QCumber](https://github.com/gimelbrantlab/QCumber))
+  * count the number of reads mapping to the reference or alternate allele at each heterozygous SNP, and collate the counts for genome intervals (e.g., genes or other features).
 
 Please find **manuals / worked examples** at **[Wiki page](https://github.com/gimelbrantlab/ASEReadCounter_star/wiki)** of this repository.
 
@@ -30,7 +30,7 @@ Please find the information about tool prerequisites at **[Wiki page](https://gi
 
 ## Citations
 
-Please cite our paper _"Unexpected variability of allelic imbalance estimates from RNA sequencing", Mendelevich A.*, Vinogradova S.*, Gupta S., Mironov A., Sunyaev S., Gimelbrant A._, if you used our pipeline in your work.
+Please cite _"Unexpected variability of allelic imbalance estimates from RNA sequencing", Mendelevich A.*, Vinogradova S.*, Gupta S., Mironov A., Sunyaev S., Gimelbrant A._, if you used our pipeline in your work.
 
 ## Reporting bugs
 
