@@ -1,5 +1,5 @@
-# ASEReadCounter* - preprocessing sequencing data allele-specific analysis
-This is a re-implementation of the ASEReadCounter tool from [GATK](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0762-6), based on [Python scripts by S.Castel](https://github.com/secastel/allelecounter).
+# ASEReadCounter* - preprocessing sequencing data for allele-specific analysis
+This is a re-implementation of the `ASEReadCounter` tool from [GATK](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0762-6), based on [allelecounter](https://github.com/secastel/allelecounter) scripts by S.Castel.
 
 This pipeline was used as the main procedure for creating tables of gene allelic counts for the further AI analysis with [QCumber](https://github.com/gimelbrantlab/QCumber) in paper
 
