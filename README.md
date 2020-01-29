@@ -36,7 +36,7 @@ Please report bugs to the Github [issues](https://github.com/gimelbrantlab/ASERe
 
 ## License
 
-MIT License
+[GNU General Public License v3.0](https://github.com/gimelbrantlab/ASEReadCounter_star/blob/master/LICENSE)
 
 
 
