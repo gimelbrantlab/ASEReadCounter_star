@@ -3,7 +3,7 @@ This is a re-implementation of the `ASEReadCounter` tool from [GATK](https://gen
 
 This pipeline was used as the main procedure for creating tables of gene allelic counts for the further AI analysis with [QCumber](https://github.com/gimelbrantlab/QCumber) in paper
 
->_"Unexpected variability of allelic imbalance estimates from RNA sequencing", Mendelevich A.*, Vinogradova S.*, Gupta S., Mironov A., Synyaev S., Gimelbrant A._
+>_"Unexpected variability of allelic imbalance estimates from RNA sequencing", Mendelevich A.*, Vinogradova S.*, Gupta S., Mironov A., Sunyaev S., Gimelbrant A._
 
 The pipeline can be divided into two main parts:
 
@@ -29,6 +29,10 @@ Please find the information about tool prerequisites at **[Wiki page](https://gi
 ## Citations
 
 Please cite our paper _"Unexpected variability of allelic imbalance estimates from RNA sequencing", Mendelevich A.*, Vinogradova S.*, Gupta S., Mironov A., Synyaev S., Gimelbrant A._, if you used our pipeline in your work.
+
+# Reporting bugs
+
+Please report bugs to the Github [issues](https://github.com/gimelbrantlab/ASEReadCounter_star/issues) page.
 
 ## License
 
