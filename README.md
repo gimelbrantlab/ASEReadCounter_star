@@ -18,7 +18,7 @@ The pipeline consists of two main parts:
 Please find **manuals / worked examples** at **[Wiki page](https://github.com/gimelbrantlab/ASEReadCounter_star/wiki)** of this repository.
 
 
-![pic](https://github.com/gimelbrantlab/ASEReadCounter_star/ASEReadCounter_star_flowchart_short.svg)
+![pic](https://github.com/gimelbrantlab/ASEReadCounter_star/blob/master/ASEReadCounter_star_flowchart_short.svg)
 
 
 ## Installation
