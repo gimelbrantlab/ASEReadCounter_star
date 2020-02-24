@@ -1,5 +1,5 @@
 # ASEReadCounter* - preprocessing sequencing data for allele-specific analysis
-This pipeline goes from RNA-seq (or similar) data to a table of total allelic counts per gene (or other genomic interval). That table serves as input for the further analysis of allelic imbalance with [QCumber](https://github.com/gimelbrantlab/QCumber). 
+This pipeline goes from RNA-seq (or similar) data to a table of total allelic counts per gene (or other genomic interval). That table serves as input for the further analysis of allelic imbalance with [Qllelic](https://github.com/gimelbrantlab/Qllelic). 
 
 This is a re-implementation of the `ASEReadCounter` tool from [GATK](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0762-6), based on [allelecounter](https://github.com/secastel/allelecounter) scripts by S.Castel.
 
@@ -12,7 +12,7 @@ The pipeline consists of two main parts:
 1. **Creation of tables with allelic counts**
 
   * map sequencing reads to references (using STAR aligner; see [complete list of dependencies](https://github.com/gimelbrantlab/ASEReadCounter_star/wiki/Prerequisites:-tools-and-packages))
-  * perform random sampling of the mapped reads to defined depth (key step for overdispersion analysis in [QCumber](https://github.com/gimelbrantlab/QCumber))
+  * perform random sampling of the mapped reads to defined depth (key step for overdispersion analysis in [Qllelic](https://github.com/gimelbrantlab/Qllelic))
   * count the number of reads mapping to the reference or alternate allele at each heterozygous SNP, and collate the counts for genome intervals (e.g., genes or other features).
 
 Please find **manuals / worked examples** at **[Wiki page](https://github.com/gimelbrantlab/ASEReadCounter_star/wiki)** of this repository.
