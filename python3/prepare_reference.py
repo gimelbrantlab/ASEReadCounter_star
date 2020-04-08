@@ -2,7 +2,7 @@
 #########################################################
 # 							#
 # 		ASE Replicates Project			#
-#         https://github.com/gimelbrantlab/GATKstar	#
+#  https://github.com/gimelbrantlab/ASEReadCounter_star #
 #							#
 #   		Authors: Mendelevich Asia		#
 #							#
@@ -122,7 +122,7 @@ def SelectBiallelicSNP_VCF(v, o, name):
         gt_name_list = row[name_col].split(":")
         gt_name = row[name_col].split(":")[gt_index]
 
-        if (len(gt_name)==1 and gt_ind!='.'):
+        if (len(gt_name)==1 and gt_name!='.'):
 
             if (gt_name != '0'):
                 alt_allele = row[alt_col].split(',')[int(gt_name)-1]
@@ -600,7 +600,7 @@ def main():
             if(input_case == "one_allele"):
                 snp_alt_vcf = tempfile.NamedTemporaryFile(delete=False, suffix=".vcf")
                 
-                GATK_SelectVariants(r=args.ref, v=args.vcf_mat, o=snp_alt_vcf.name, b=False)
+                GATK_SelectVariants(r=args.ref, v=args.vcf_alt, o=snp_alt_vcf.name, b=False)
                 SelectBiallelicSNP_VCF(snp_alt_vcf.name, sep_vcf_alt, name_alt)
 
                 os.remove(snp_alt_vcf.name)
@@ -608,7 +608,7 @@ def main():
             elif(input_case == "joint_one_allele"):
                 snp_alt_vcf = tempfile.NamedTemporaryFile(delete=False, suffix=".vcf")
 
-                GATK_SelectVariants(r=args.ref, v=args.vcf_mat, n=name_alt, o=snp_alt_vcf.name, b=False)
+                GATK_SelectVariants(r=args.ref, v=args.vcf_joint, n=name_alt, o=snp_alt_vcf.name, b=False)
                 SelectBiallelicSNP_VCF(snp_alt_vcf.name, sep_vcf_alt, name_alt)
 
                 os.remove(snp_alt_vcf.name)
