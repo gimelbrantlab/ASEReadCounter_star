@@ -2,7 +2,7 @@
 #########################################################
 #                                                       #
 #               ASE Replicates Project                  #
-#         https://github.com/gimelbrantlab/GATKstar     #
+#  https://github.com/gimelbrantlab/ASEReadCounter_star #
 #                                                       #
 #   Authors: Mendelevich Asia, Svetlana Vinogradova     #
 #   Idea is taken from GATK pipeline (Stephane Castel)	#
