@@ -600,7 +600,7 @@ def main():
             if(input_case == "one_allele"):
                 snp_alt_vcf = tempfile.NamedTemporaryFile(delete=False, suffix=".vcf")
                 
-                GATK_SelectVariants(r=args.ref, v=args.vcf_alt, o=snp_alt_vcf.name, b=False)
+                GATK_SelectVariants(r=args.ref, v=vcf_alt, o=snp_alt_vcf.name, b=False)
                 SelectBiallelicSNP_VCF(snp_alt_vcf.name, sep_vcf_alt, name_alt)
 
                 os.remove(snp_alt_vcf.name)
@@ -652,7 +652,7 @@ def main():
             # .. to singleton (snp):
             singleton_vcf = tempfile.NamedTemporaryFile(delete=False, suffix=".vcf")
             if (input_case == "one_allele"):
-                GATK_SelectVariants(r=args.ref, v=args.vcf_alt, o=singleton_vcf.name)
+                GATK_SelectVariants(r=args.ref, v=vcf_alt, o=singleton_vcf.name)
             elif (input_case == "joint_one_allele"):
                 GATK_SelectVariants(r=args.ref, v=args.vcf_joint, o=singleton_vcf.name, n=name_alt)          
 
