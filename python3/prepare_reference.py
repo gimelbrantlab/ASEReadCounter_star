@@ -62,7 +62,7 @@ def GATK_SelectVariants(r, v, o, g=None, n=None, b=False):
         # tmp exons bed file:
         #exon_bed = tempfile.NamedTemporaryFile(delete=False, suffix=".bed")
         exon_bed = os.path.join(os.path.dirname(o), os.path.basename(g) + "exons.bed")
-        cmd_exon = " ".join(["grep -w 'exon'", g, "| grep '^[0-9XYI]' | awk 'BEGIN{FS=OFS=", '"\t"', "}; {print $1,$4-1,$5}' >", exon_bed])
+        cmd_exon = " ".join(["grep -w 'exon'", g, "| grep '^[0-9XYIV]' | awk 'BEGIN{FS=OFS=", '"\t"', "}; {print $1,$4-1,$5}' >", exon_bed])
         print(cmd_exon)
         subprocess.check_output(cmd_exon, shell=True)
         flags['-L'] = exon_bed
@@ -693,7 +693,7 @@ def main():
                 vcf_het_region = vcf_het.replace(".vcf", ".exons.vcf")
 
                 exon_bed = os.path.join(os.path.dirname(vcf_het_region), os.path.basename(args.gtf) + "exons.bed")
-                cmd_exon_bed = " ".join(["grep -w 'exon'", args.gtf, "| grep '^[0-9XYI]' | awk 'BEGIN{FS=OFS=", '"\t"', "}; {print $1,$4-1,$5}' >", exon_bed])
+                cmd_exon_bed = " ".join(["grep -w 'exon'", args.gtf, "| grep '^[0-9XYIV]' | awk 'BEGIN{FS=OFS=", '"\t"', "}; {print $1,$4-1,$5}' >", exon_bed])
                 print(cmd_exon_bed)
                 subprocess.check_output(cmd_exon_bed, shell=True)
                 cmd_bed_head = "sed -i '1ichrom\tchromStart\tchromEnd' " + exon_bed
