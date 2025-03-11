@@ -23,7 +23,11 @@ Please find **manuals / worked examples** at **[Wiki page](https://github.com/gi
 
 ## Installation
 
-Clone this repository to your local machine. No additional installation needed.
+```
+docker pull sasha/ase
+```
+
+Or clone this repository to your local machine.
 Please find the information about tool prerequisites at **[Wiki page](https://github.com/gimelbrantlab/ASEReadCounter_star/wiki)**.
 
 ## Citations
