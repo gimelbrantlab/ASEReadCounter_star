@@ -3,6 +3,8 @@ This pipeline goes from RNA-seq (or similar) data to a table of total allelic co
 
 This is a re-implementation of the `ASEReadCounter` tool from [GATK](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0762-6), based on [allelecounter](https://github.com/secastel/allelecounter) scripts by S.Castel.
 
+simple install: `docker pull sasha/ase`
+
 The pipeline consists of two main parts:
 
 0. **Reference preparation**
